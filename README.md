@@ -26,5 +26,6 @@ cd db\
 cd docker\
 docker-compose up
 8. Otworzyć drugą zakładkę w terminalu i wpisać:\
+\
 nodemon app.js
 9. Otworzyć przeglądarkę i wpisać "http://localhost:3000/"
