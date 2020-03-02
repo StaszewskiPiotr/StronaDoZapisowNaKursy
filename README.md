@@ -13,7 +13,7 @@ Connection name: tin-projekt\
 Hostname: localhost\
 Port: 3306\
 Username: root\
-Password: toor\
+Password: toor
 
 3. Połączyć się za pomocą "Open connection";
 4. W zakładce Query wkleić cały kod z pliku, do którego ścieżka wygląda tak "tin_baza_danych_projekt/db/schema.sql", a następnie kliknąć w zakładkę Query>Execute
@@ -24,7 +24,7 @@ npm install\
 npm install -g nodemon\
 cd db\
 cd docker\
-docker-compose up\
+docker-compose up
 8. Otworzyć drugą zakładkę w terminalu i wpisać:
 nodemon app.js
 9. Otworzyć przeglądarkę i wpisać "http://localhost:3000/"
