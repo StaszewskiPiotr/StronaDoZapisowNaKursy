@@ -7,7 +7,7 @@ Użyte oprogramowanie:
 
 Szczegółowe kroki odpalenia programu:
 1. Otworzyć w Visual Studio Code folder "tin_baza_danych_projekt"
-2. Otworzyć program MySql Workbench oraz utworzyć w nim połączenie oparte o dane:\
+2. Otworzyć program MySql Workbench oraz utworzyć w nim połączenie oparte o dane:
 \
 Connection name: tin-projekt\
 Hostname: localhost\
