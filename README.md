@@ -14,7 +14,7 @@ Hostname: localhost\
 Port: 3306\
 Username: root\
 Password: toor\
-\
+
 3. Połączyć się za pomocą "Open connection";
 4. W zakładce Query wkleić cały kod z pliku, do którego ścieżka wygląda tak "tin_baza_danych_projekt/db/schema.sql", a następnie kliknąć w zakładkę Query>Execute
 5. Uruchomić program Docker Desktop
