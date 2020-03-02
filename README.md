@@ -1,7 +1,7 @@
 # StronaDoZapisowNaKursy 
 
 Użyte oprogramowanie:
-1.Visual Studio Code - wersja 1.40.2
+1. Visual Studio Code - wersja 1.40.2
 2. MySql Workbench - wersja 8.0.18
 3. Docker Desktop - wersja 2.1.0.5
 
@@ -27,4 +27,4 @@ cd docker
 docker-compose up
 8. Otworzyć drugą zakładkę w terminalu i wpisać:
 nodemon app.js
-9.Otworzyć przeglądarkę i wpisać "http://localhost:3000/"
+9. Otworzyć przeglądarkę i wpisać "http://localhost:3000/"
