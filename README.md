@@ -7,14 +7,14 @@ Użyte oprogramowanie:
 
 Szczegółowe kroki odpalenia programu:
 1. Otworzyć w Visual Studio Code folder "tin_baza_danych_projekt"
-2. Otworzyć program MySql Workbench oraz utworzyć w nim połączenie oparte o dane:
-
-Connection name: tin-projekt/n
-Hostname: localhost
-Port: 3306
-Username: root
-Password: toor
-
+2. Otworzyć program MySql Workbench oraz utworzyć w nim połączenie oparte o dane:\
+\
+Connection name: tin-projekt\
+Hostname: localhost\
+Port: 3306\
+Username: root\
+Password: toor\
+\
 3. Połączyć się za pomocą "Open connection";
 4. W zakładce Query wkleić cały kod z pliku, do którego ścieżka wygląda tak "tin_baza_danych_projekt/db/schema.sql", a następnie kliknąć w zakładkę Query>Execute
 5. Uruchomić program Docker Desktop
