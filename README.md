@@ -3,7 +3,7 @@
 Strona ta jest projektem końcowym zaliczającym przedmiot TIN - Technologie internetu.\
 \
 W tym projekcie za zadanie miałem stworzyć stronę połączoną z małą bazą danych(4 encje, jedno połączenie wiele do wiele). Strona miała umożliwiać dodawanie, usuwanie oraz edycję danych z owej bazy danych. Punktowana była również walidacja danych zarówno po stronie klienta jak i serwera. Wygląd strony nie był aż tak oceniany jak cała funkcjonalność dlatego zainspirowałem się stronami z lat 90, prostota i przejrzystość w jednym ;)\
-\
+
 
 Użyte oprogramowanie:
 1. Visual Studio Code - wersja 1.40.2
