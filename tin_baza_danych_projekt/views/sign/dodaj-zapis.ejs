@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-dodaj-zapis.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+	
+		<script type="text/javascript" src="/js/zapis.js" async></script>
+
+  </head>
+    <body>
+		<div class="a" align="center">
+			<div class="tytul">
+			<h1>Dodaj zapis</h1>
+			</div>
+		</div>
+			<div class="d" align="center">
+				<div class="f">					
+						<form action="/sign/<%= formAction %>" method="POST" onsubmit="return checkform()" align="center">
+						<div class="g" align="left">
+						<p>
+							<label id="klient" for="input-klient">Klient:</label>&emsp;&emsp;&emsp;&nbsp;&nbsp;
+							<select id="input-klient" name="klient">
+								<option></option>
+								<% userList.forEach(function(user){ %>
+									<option><%= user.Id_Klient %> : <%= user.imie %> <%= user.nazwisko %></option>
+								<% }) %>
+							</select>
+							<span style="font-size:12px; color: red" class="text-helper1" >
+						</p>
+						<p>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="link-dodaj-klienta" href="../users/dodaj-klienta">Nie ma klienta</a>
+						</p>
+						<!-- <p>
+							<label id="wykladowca" for="input-wykladowca">Wykładowca:</label>
+							<select id="input-wykladowca" name="wykladowca">
+									<option></option>
+								<% instructorList.forEach(function(instructor){ %>
+									<option><%= instructor.Id_wykladowca %> : <%= instructor.imie %> <%= instructor.nazwisko %></option>
+								<% }) %>
+							</select>
+							<span style="font-size:12px; color: red" class="text-helper2" ><br>
+						</p><br> -->
+						<p>
+							<label id="kurs" for="input-kurs">Kurs:</label>&emsp;&emsp;&emsp;&nbsp;&nbsp;
+							<select id="input-kurs" name="kurs">
+								<option></option>
+								<% coursList.forEach(function(cours){ %>
+									<option><%= cours.Id_kurs %> : <%= cours.Nazwa %></option>
+								<% }) %>
+							</select>
+							<span style="font-size:12px; color: red" class="text-helper3" ><br><br>
+						</p><br>
+						<p>
+							<label for="data">Data:</label>&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+							<input type="date" id="data" name="data" />
+							<span style="font-size:12px; color: red" class="text-helper4" >
+						</p><br>	
+						<p>
+							<label id="godzina" for="input-godzina">Godzina:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;						
+							<select id="input-godzina" name="godzina">
+								<option>8:00</option>
+								<option>9:00</option>
+								<option>10:00</option>
+								<option>11:00</option>
+								<option>12:00</option>
+								<option>13:00</option>
+								<option>14:00</option>
+								<option>15:00</option>
+								<option>16:00</option>
+								<option>17:00</option>
+							</select><br>
+						</p>
+						</div><br><br>
+							<button type="reset" value="Reset">Reset</button><br><br><br><br>	
+							<button id="accept-button" class="accept-button" type="submit">Dodaj zapis</button><br><br>	
+					</form>				
+				</div>
+			</div>
+  </body>
+</html>

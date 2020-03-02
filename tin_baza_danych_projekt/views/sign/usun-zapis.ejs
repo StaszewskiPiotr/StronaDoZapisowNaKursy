@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-usun-zapis.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+    <body>
+		<div class="strona" align="center">
+			<div class="kontener"> 
+				<div>
+					<h4>Czy na pewno chcesz usunąć zapis?</h4>
+						<div class="dane" align="center">
+							<form action="/sign/<%= formAction %>" method="POST">
+							<div class="dane2" align="left">
+								<h6>ID zapisu: <%= sign[0].Id_zapis %></h6>
+								<h6>Data:  <%= sign[0].data %></h6>
+								<h6>Godzina:  <%= sign[0].godzina %></h6>
+								<h6>Klient: <%= sign[0].imie %> <%= sign[0].nazwisko %></h6>
+								<h6>Kurs: <%= sign[0].Nazwa %></h6>
+							</div>
+							<div>
+								<button id="usun_button" type="submit" >Usuń</button><br><br>
+								<input type="hidden" id="id_zapis" name="id_zapis" value="<%= sign[0].Id_zapis %>"/>
+							</div>
+							</form>
+							<form method="GET">
+									<button type="submit" formaction="../sign/lista-zapisow">Powrót</button>
+							</form>
+						</div>
+				</div>
+			
+			</div>
+		</div>
+  </body>
+</html>

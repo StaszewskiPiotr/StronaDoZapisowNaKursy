@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-zaloz-konto.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+	
+	<script type="text/javascript" src="/js/zaloz_konto_przycisk.js" async></script>
+	
+  </head>
+    <body>
+		<div class="a" align="center">
+			<div class="tytul">
+			<h1>Załóż konto</h1>
+			</div>
+		</div>
+			<div class="d" align="center">
+				<div class="f">					
+						<form action="/users/<%= formAction %>" method="POST" onsubmit="return checkform()" align="center">
+							<div class="g" align="left">
+							<p>
+								<label id="imie" for="input-imie">Imię:</label>&emsp;&emsp;&emsp;&emsp;&nbsp;
+								<input type="text" id="input-imie" name="imie"/>
+								<span style="font-size:12px; color: red" class="text-helper1" ></span><br><br>
+							</p>
+							<p>
+								<label id="nazwisko" for="input-nazwisko">Nazwisko:</label>&emsp;&nbsp;&nbsp;&nbsp;
+								<input id="input-nazwisko" name="nazwisko" type="text"/>
+								<span style="font-size:12px; color: red" class="text-helper2"></span><br><br>
+							</p>
+							<p>
+								<label id="nazwisko" for="input-plec">Płeć:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+								<select id="input-plec" name="plec">
+									<option>Kobieta</option>
+									<option>Mężczyzna</option>
+									<option>Inne</option>
+								</select><br><br>
+							</p>
+							<p>
+								<label id="email" for="input-email">Email:</label>&emsp;&emsp;&emsp;&nbsp;&nbsp;
+								<input id="input-email" name="email" type="text"/>
+								<span style="font-size:12px; color: red" class="text-helper3"></span><br><br>
+							</p>
+							<p>	
+								<label for="input-password">Hasło:</label>&emsp;&emsp;&emsp;&nbsp;&nbsp;
+								<input type="password" id="input-password" name="password" minlength="8" >	
+		<!--&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label class="password">Hasło musi składać się z co najmniej 8 znaków.<label>-->
+								<span style="font-size:12px; color: red" class="text-helper4"></span><br>
+							</p>	
+							<p>
+								<label id="password-again" for="input-password-again">Powtórz hasło:</label>
+								<input type="password" id="input-password-again" name="passwordAgain" minlength="8" >
+								<span style="font-size:12px; color: red" class="text-helper5"></span><br><br>
+							</p>
+							<p>	
+								<label id="DataUr" for="data-urodzenia-input">Data urodzenia:</label>
+								<input type="date" id="data-urodzenia-input" name="data_urodzenia"/>
+								<span style="font-size:12px; color: red" class="text-helper6"></span>
+							</p>	
+							</div><br><br>
+								<button type="reset" value="Reset">Reset</button><br><br>	
+								<button id="accept-button" type="submit">Załóż konto</button><br><br>	
+								<h4>Za chwilę otrzymasz na mail'a wiadomość z linkiem aktywacyjnym.<br>Kliknij go i zacznij zabawę !<h4>
+								
+								</form>
+					
+				</div>
+			</div>
+	
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-lista-zapisow.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+	<title>Document</title>
+
+  </head>
+    <body>
+		<div class="a">
+			
+			<h1>Lista zapisów</h1>
+			
+		</div>
+		<div class="c">
+			<div class="buttons" align="center">
+			 <a href="../users/panel-admin"><button class="butto" type="button">Wróć do panelu admina</button></a><br><br><br>
+			 <a href="index"><button class="butto" type="button">Wróć na stronę główną</button></a><br><br><br>
+			 <a href="../users/admin-logowanie"><button class="butto" type="button">Wyloguj</button></a>
+			 </div>
+			<div class="d" align="center">
+				<div class="f" align="center">					
+						<form method="GET" align="center">
+						<div id="table-scroll">
+							<table class="tabela">
+								<tr>
+									<th>Zaznacz</th>
+									<th>ID zapisu</th>
+									<th>Data</th>
+									<th>Godzina</th>
+									<th>Klient</th>
+									<th>Kurs</th>
+								</tr>
+								<% lista.forEach(function(sign){ %>
+								<tr>
+									<td><input id="zapis1" name="id_zapis" type="checkbox" value="<%= sign.Id_zapis %>"/></td>
+									<td><%= sign.Id_zapis %></td>
+									<td><%= sign.data %></td>
+									<td><%= sign.godzina %></td>
+									<td><%= sign.imie %> <%= sign.nazwisko %></td>
+									<td><%= sign.Nazwa %></td>
+								</tr>
+								<% }) %>
+							</table>
+							</div>					
+							
+						
+					<div class="buttons2">
+							<a href="../sign/dodaj-zapis"><button class="butto" align="left" type="button">Dodaj</button></a>
+							<button class="butto" align="right" type="submit" formaction="../sign/usun-zapis">Usuń</button>
+						    <button class="butto" type="submit" formaction="../sign/edytuj-zapis">Edytuj</button>
+							</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	
+  </body>
+</html>

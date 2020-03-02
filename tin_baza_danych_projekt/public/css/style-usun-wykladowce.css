@@ -1,0 +1,40 @@
+body
+{
+	background-color: RoyalBlue;
+}
+div.kontener
+{
+  margin-top:-130px;
+  height: 530px;
+  width: 500px;
+  background-color: #00bfff;
+  border: 3px solid blue; 
+  font-family: Josefin Sans, sans-serif;
+}
+div.strona
+{
+	margin-top:200px;
+}
+div.dane
+{
+	width:300px;
+	height:420px;
+	border: 2px solid red;
+	border-radius:20px;
+	
+}
+div.dane2
+{
+	font-size:20px;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-bottom:10px;
+	margin-left:50px;
+	width:170px;
+	height:310px;
+	border: 1px solid #00bfff;
+}
+#usun_button
+{
+	width:100px;
+}

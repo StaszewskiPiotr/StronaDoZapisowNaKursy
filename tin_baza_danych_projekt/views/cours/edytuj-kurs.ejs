@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-edytuj-kurs.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+	
+	<script type="text/javascript" src="/js/dodaj_kurs.js" async></script>
+
+  </head>
+    <body>
+		<div class="a" align="center">
+			<div class="tytul">
+			<h1>Edytuj kurs</h1>
+			</div>
+		</div>
+			<div class="d" align="center">
+				<div class="f">					
+						<form action="/cours/edit" method="POST" onsubmit="return checkform()" align="center">
+						<div class="g" align="left">
+							<p>
+								<label id="nazwa" for="input-nazwa">Nazwa:</label>&emsp;&emsp;&emsp;&nbsp;
+								<input id="input-nazwa" type="text" name="kurs" value="<%= cours.name %>"/>
+								<span style="font-size:12px; color: red" class="text-helper1" ></span><br><br>
+							</p><br>
+							<div class="opis-field">
+							  <label for="input-opis">Opis:</label>&emsp;&emsp;&emsp;&emsp;&nbsp;
+							  <textarea id="input-opis" name="opis" rows="5"><%= cours.description %></textarea>
+							  <span style="font-size:12px; color: red" class="text-helper2"></span>
+							</div><br>
+							<p>
+								<label id="cena" for="input-cena">Cena(zł):</label>&emsp;&emsp;&nbsp;&nbsp;
+								<input id="input-cena" type="text" name="cena" value="<%= cours.price %>"/>
+								<span style="font-size:12px; color: red" class="text-helper3"></span><br><br>
+							</p>
+							<p>
+								<label id="cena" for="wybrany">Wykładowca przypisany:</label>&emsp;&emsp;&nbsp;&nbsp;
+								<input id="wybrany" type="text" disabled value="<%= instructorDefault2.firstName %> <%= instructorDefault2.lastName %>"/>
+								<span style="font-size:12px; color: red" class="text-helper3"></span><br><br>
+							</p>
+							<p>
+								<label id="wykladowca" for="input-wykladowca">Wykładowca:</label>&emsp;&emsp;&nbsp;&nbsp;
+								<select name="wykladowca" id="input-wykladowca">
+									<% instructorList.forEach(function(instructor){ %>
+									<option><%= instructor.Id_wykladowca %> : <%= instructor.imie %> <%= instructor.nazwisko %></option>
+									<% }) %>	
+								</select>
+								<span style="font-size:12px; color: red" class="text-helper3"></span><br><br>
+							</p>
+						</div>
+						<p class="przyciski">
+							<button type="reset" value="Reset">Reset</button><br><br><br><br>	
+							<button id="accept-button" class="accept-button" type="submit">Edytuj kurs</button><br><br>
+							<input type="hidden" id="IdKurs" name="IdKurs" value="<%= cours.id %>">
+						</p>
+					
+					</form>
+					
+				</div>
+			</div>
+	
+  </body>
+</html>

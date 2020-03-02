@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-lista-kursow.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+	<title>Document</title>
+  </head>
+    <body>
+		<div class="a">
+			
+			<h1>Lista kursów</h1>
+			
+		</div>
+		<div class="c">
+			<div class="buttons" align="center">
+			 <a href="../users/panel-admin"><button class="butto" type="button">Wróć do panelu admina</button></a><br><br><br>
+			 <a href="index"><button class="butto" type="button">Wróć na stronę główną</button></a><br><br><br>
+			 <a href="../users/admin-logowanie"><button class="butto" type="button">Wyloguj</button></a>
+			 </div>
+			<div class="d" align="center">
+				<div class="f" align="center">					
+					<form  method="GET" align="center">	
+						<div id="table-scroll">
+							<table class="tabela">
+								<tr>
+									<th>Zaznacz</th>
+									<th>ID</th>
+									<th>Nazwa</th>
+									<th>Opis</th>
+									<th>Cena</th>
+									<th>Wykładowca</th>
+								</tr>
+								<% coursList.forEach(function(cours){ %>
+								<tr>
+									<td><input id="kurs1" type="checkbox" name="id_kurs" value="<%= cours.Id_kurs %>"/></td>
+									<td><%= cours.Id_kurs %></td>
+									<td><%= cours.Nazwa %></td>
+									<td><%= cours.Opis %></td>
+									<td><%= cours.Cena %></td>
+									<td><%= cours.Wykladowca_Id_wykladowca %></td>
+								</tr>
+								<% }) %>
+							</table>
+							</div>					
+					<div class="buttons2">
+							<a href="../cours/dodaj-kurs"><button class="butto" align="left" type="button">Dodaj</button></a>
+							<button class="butto" align="right" type="submit" formaction="../cours/usun-kurs">Usuń</button>
+							<button class="butto" type="submit" formaction="../cours/edytuj-kurs">Edytuj</button>
+							</div>
+						</form>
+				</div>
+			</div>
+		</div>
+	
+  </body>
+</html>

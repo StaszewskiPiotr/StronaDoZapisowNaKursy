@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-usun-klienta.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+	<title>Document</title>
+
+  </head>
+    <body>
+		<div class="strona" align="center">
+			<div class="kontener"> 
+				<div>
+					<h4>Czy na pewno chcesz usunąć klienta?</h4>
+						<div class="dane" align="center">
+							<div class="dane2" align="left">
+								<form action="/users/<%= formAction %>" method="POST">
+								<h6>ID klienta: <%= osoba[0].Id_Klient %> </h6>
+								<h6>Imię: <%= osoba[0].imie %> </h6>
+								<h6>Nazwisko: <%= osoba[0].nazwisko %></h6>
+								<h6>Płeć: <%= osoba[0].plec %></h6>
+								<h6>Email: <%= osoba[0].email %></h6>
+							</div>
+							<div>
+								<button id="usun_button" type="submit">Usuń</button><br><br>
+								<input type="hidden" id="Id" name="Id" value="<%= osoba[0].Id_Klient %>"/>
+							</div>
+								</form>
+						
+						<form method="GET">
+								<button type="submit" formaction="../users/lista-klientow">Powrót</button>
+						</form>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+  </body>
+</html>

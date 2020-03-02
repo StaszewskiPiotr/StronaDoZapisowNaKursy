@@ -1,0 +1,36 @@
+body
+{
+	background-color: RoyalBlue;
+}
+div.box
+{
+  margin-top:-100px;
+  height: 400px;
+  width: 400px;
+  background-color: #00bfff;
+  border: 3px solid blue; 
+  font-family: Josefin Sans, sans-serif;
+  border-radius:5px;
+}
+div.strona
+{
+	margin-top:200px;
+}
+div.g
+{
+  margin-top:40px;
+  height: 200px;
+  width: 300px;
+  background-color: white;
+  border: 3px solid blue; 
+  border-radius:30%;
+}
+.panel-admin
+{
+	margin-top:30px;
+	font-size:30px;
+}
+.button2
+{
+	margin-top:30px;
+}

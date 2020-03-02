@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-lista-klientow.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+	<title>Document</title>
+
+  </head>
+    <body>
+		<div class="a">
+			
+			<h1>Lista klientów</h1>
+			
+		</div>
+		<div class="c">
+			<div class="buttons" align="center">
+			 <a href="../users/panel-admin"><button class="butto" type="button">Wróć do panelu admina</button></a><br><br><br>
+			 <a href="index"><button class="butto" type="button">Wróć na stronę główną</button></a><br><br><br>
+			 <a href="../users/admin-logowanie"><button class="butto" type="button">Wyloguj</button></a>
+			 </div>
+			<div class="d" align="center">
+				<div class="f" align="center">					
+						<form method="GET" align="center">
+						<div id="table-scroll">
+							<table class="tabela">
+								<tr>
+									<th>Zaznacz</th>
+									<th>ID</th>
+									<th>Imię</th>
+									<th>Nazwisko</th>
+									<th>Płeć</th>
+									<th>Email</th>
+									<th>Data urodzenia</th>
+								</tr>
+								<% lista.forEach(function(user){ %>
+								<tr>
+									<td><input id="id_klient" class="checks" name="id_klient" type="checkbox" value="<%= user.Id_Klient %>"/></td>
+									<td><%= user.Id_Klient %></td>
+									<td><%= user.imie %></td>      
+									<td><%= user.nazwisko %></td>
+									<td><%= user.plec %></td>
+									<td><%= user.email %></td>
+									<td><%= user.data_urodzenia %></td>
+								</tr>
+								<% }) %>
+							</table>
+							</div>	
+						
+											
+							
+							
+					<div class="buttons2">
+							<a href="../users/dodaj-klienta"><button class="butto" type="button">Dodaj</button></a>
+							<button class="butto" type="submit" formaction="../users/usun-klienta">Usuń</button>
+							<button class="butto" type="submit" formaction="../users/edytuj-klienta">Edytuj</button>
+							</div>
+						</form>
+				</div>
+			</div>
+		</div>
+
+  </body>
+</html>

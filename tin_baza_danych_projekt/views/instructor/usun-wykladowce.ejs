@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-usun-wykladowce.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+    <body>
+		<div class="strona" align="center">
+			<div class="kontener"> 
+				<div>
+					<h4>Czy na pewno chcesz usunąć wykładowcę?</h4>
+						<div class="dane" align="center">
+							<div class="dane2" align="left">
+							<form action="/instructor/<%= formAction %>" method="POST">
+								<h6>ID wykładowcy:  <%= instructor[0].Id_wykladowca %></h6>
+								<h6>Imię: <%= instructor[0].imie %></h6>
+								<h6>Nazwisko: <%= instructor[0].nazwisko %>/<h6>
+								<h6>Data urodzenia: <%= instructor[0].data_urodzenia %></h6>
+								<h6>Płeć: <%= instructor[0].plec %></h6>
+								<h6>Email: <%= instructor[0].email %></h6>
+								<input type="hidden" id="Id" name="Id" value=" <%= instructor[0].Id_wykladowca %>"/>
+							</div>
+							<div>
+								<button id="usun_button" type="submit">Usuń</button><br><br>
+							</div>
+						</form>
+						<form method="GET">
+								<button type="submit" formaction="../instructor/lista-wykladowcow">Powrót</button>
+						</form>
+						</div>
+				</div>
+			
+			</div>
+		</div>
+  </body>
+</html>

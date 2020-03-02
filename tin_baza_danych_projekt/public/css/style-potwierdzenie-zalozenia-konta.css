@@ -1,0 +1,23 @@
+body
+{
+	background-color: RoyalBlue;
+}
+div.box
+{
+  height: 200px;
+  width: 50%;
+  background-color: #00bfff;
+  border: 3px solid blue; 
+  font-family: Josefin Sans, sans-serif;
+}
+div.strona
+{
+	margin-top:200px;
+}
+div.g
+{
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  border: 3px solid blue; 
+}

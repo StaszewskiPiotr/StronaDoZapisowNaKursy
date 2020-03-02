@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-dodaj-wykladowce.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+	
+	
+	<script type="text/javascript" src="/js/wykladowca-edytuj.js" async></script>
+
+  </head>
+    <body>
+		<div class="a" align="center">
+			<div class="tytul">
+			<h1>Dodaj wykładowce</h1>
+			</div>
+		</div>
+			<div class="d" align="center">
+				<div class="f">					
+						<form action="/instructor/<%= formAction %>" method="POST" onsubmit="return checkform()" align="center">
+						<div class="g" align="left">
+						<p>
+							<label id="imie" for="input-imie">Imię:</label>&emsp;&emsp;&emsp;&emsp;&nbsp;
+							<input id="input-imie" name="imie" type="text" <%= formAction ? '' : 'readonly' %>/>
+							<span style="font-size:12px; color: red" class="text-helper1" ></span><br><br>
+						</p><br><br>
+						<p>
+							<label id="nazwisko" for="input-nazwisko">Nazwisko:</label>&emsp;&nbsp;&nbsp;&nbsp;
+							<input id="input-nazwisko" name="nazwisko" type="text" <%= formAction ? '' : 'readonly' %> />
+							<span style="font-size:12px; color: red" class="text-helper2" ></span><br><br>
+						</p><br><br>
+						<p>	
+							<label for="data-urodzenia-input">Data urodzenia:</label>
+							<input name="dataUrodzenia" type="date" id="data-urodzenia-input" required/>
+							<span style="font-size:12px; color: red" class="text-helper6" ></span>
+						</p><br><br>
+						<p>
+							<label for="input-plec">Płeć:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+							<select name="plec" id="input-plec" <%= formAction ? '' : 'readonly' %></select>>
+								<option>Kobieta</option>
+								<option>Mężczyzna</option>
+								<option>Inne</option>
+							</select><br><br>
+						</p><br>
+						<p>
+							<label id="email" for="input-email">Email:</label>&emsp;&emsp;&emsp;&nbsp;&nbsp;
+							<input id="input-email" name="email" type="text" <%= formAction ? '' : 'readonly' %>/>
+							<span style="font-size:12px; color: red" class="text-helper3" ></span><br><br>
+						</p><br>
+						</div>
+						<div class="przyciski">
+							<button type="reset" value="Reset">Reset</button><br><br>	
+							<button id="accept-button" class="accept-button" type="submit">Dodaj</button><br><br>
+						</div>
+						</form>
+					</form>
+					
+				</div>
+			</div>
+		
+
+  </body>
+</html>

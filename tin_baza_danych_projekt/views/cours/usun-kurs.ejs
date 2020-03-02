@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-usun-kurs.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+    <body>
+		<div class="strona" align="center">
+			<div class="kontener"> 
+				<div>
+					<h4>Czy na pewno chcesz usunąć kurs?</h4>
+						<div class="dane" align="center">
+							<form action="/cours/<%= formAction %>" method="POST">
+							<div class="dane2" align="left">
+								<h6>ID kursu: <%= kurs[0].Id_kurs %></h6>
+								<h6>Nazwa: <%= kurs[0].Nazwa %></h6>
+								<h6>Opis: <%= kurs[0].Opis %></h6>
+							</div>
+							<div>
+								<button type="submit" id="usun_button" type="button">Usuń</button><br><br>
+								<input type="hidden" id="Id" name="Id" value="<%= kurs[0].Id_kurs %>"/>
+							</div>
+						</form>
+						<form method="GET">
+								<button type="submit" formaction="../cours/lista-kursow">Powrót</button>
+						</form>
+						</div>
+				</div>
+			</div>
+		</div>
+  </body>
+</html>

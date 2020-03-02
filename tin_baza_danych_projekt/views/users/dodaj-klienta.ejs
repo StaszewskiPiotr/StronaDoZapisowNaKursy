@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-dodaj-klienta.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+	
+	<script type="text/javascript" src="/js/dodaj_klienta.js" async></script>
+
+  </head>
+    <body>
+		<div class="a" align="center">
+			<div class="tytul">
+			<h1>Dodaj klienta</h1>
+			</div>			
+		</div>
+			<div class="d" align="center">
+				<div class="f">					
+						<form action="/users/<%= formAction %>" method="POST" onsubmit="return checkform()" align="center">
+						<div class="g" align="left">
+						<p>
+							<label id="imie" for="input-imie">Imię:</label>&emsp;&emsp;&emsp;&emsp;&nbsp;
+							<input id="input-imie" name="imie" type="text" <%= formAction ? '' : 'readonly' %> value="<%= user.firstName %>"></input>
+							<span style="font-size:12px; color: red" class="text-helper1" ></span><br><br>
+						</p><br>
+						<p>
+							<label id="nazwisko" for="input-nazwisko">Nazwisko:</label>&emsp;&nbsp;&nbsp;&nbsp;
+							<input id="input-nazwisko" name="nazwisko" type="text" <%= formAction ? '' : 'readonly' %>
+							value="<%= user.lastName %>"></input>
+							<span style="font-size:12px; color: red" class="text-helper2" ></span><br><br>
+						</p><br>
+						<p>
+							<label id="nazwisko" for="input-plec">Płeć:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+							<select id="input-plec" name="plec" <%= formAction ? '' : 'readonly' %>value="<%= user.sex %>"></input>
+								<option>Kobieta</option>
+								<option>Mężczyzna</option>
+								<option>Inne</option>
+							</select><br><br>
+						</p><br>
+						<p>
+							<label id="email" for="input-email">Email:</label>&emsp;&emsp;&emsp;&nbsp;&nbsp;
+							<input id="input-email" name="email" type="text" <%= formAction ? '' : 'readonly' %>
+							value="<%= user.email %>"></input>
+							<span style="font-size:12px; color: red" class="text-helper3" ></span><br><br>
+						</p><br>
+						<p>	
+							<label id="DataUr" for="data-urodzenia-input">Data urodzenia:</label>
+							<input type="date" name="data_urodzenia" id="data-urodzenia-input" <%= formAction ? '' : 'readonly' %>
+							value="<%= user.dateOfBirth %>"></input>
+							<span style="font-size:12px; color: red" class="text-helper6"></span>
+						</p>
+						</div><br><br>
+							<button type="reset" value="Reset">Reset</button><br><br><br><br>	
+							<button id="accept-button" class="accept-button" type="submit">Dodaj klienta</button><br><br>
+					</form>
+					
+				</div>
+			</div>
+
+  </body>
+</html>

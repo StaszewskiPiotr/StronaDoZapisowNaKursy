@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-lista-wykladowcow.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+	<title>Document</title>
+
+  </head>
+    <body>
+		<div class="a">
+			
+			<h1>Lista wykładowców</h1>
+			
+		</div>
+		<div class="c">
+			<div class="buttons" align="center">
+			 <a href="../users/panel-admin"><button class="butto" type="button">Wróć do panelu admina</button></a><br><br><br>
+			 <a href="index"><button class="butto" type="button">Wróć na stronę główną</button></a><br><br><br>
+			 <a href="../users/admin-logowanie"><button class="butto" type="button">Wyloguj</button></a>
+			 </div>
+			<div class="d" align="center">
+				<div class="f" align="center">					
+						<form method="GET" align="center">
+						<div id="table-scroll">
+							<table class="tabela">
+								<tr>
+									<th>Zaznacz</th>
+									<th>ID</th>
+									<th>Imię</th>
+									<th>Nazwisko</th>
+									<th>Data urodzenia</th>
+									<th>Płeć</th>
+									<th>Email</th>
+								</tr>
+								<% lista.forEach(function(instructor){ %>
+								<tr>
+									<td><input id="klient1" type="checkbox" name="id_wykladowca" value="<%= instructor.Id_wykladowca %>"/></td>
+									<td><%= instructor.Id_wykladowca %></td>
+									<td><%= instructor.imie %></td>
+									<td><%= instructor.nazwisko %></td>
+									<td><%= instructor.data_urodzenia %></td>
+									<td><%= instructor.plec %></td>
+									<td><%= instructor.email %></td>
+									<!-- <td>
+										<div class="catContainer" align="left">
+											<ol>
+												<li>Rozmowa kwalifikacyjna</li><br>
+												<li>Pomoc w stworzeniu CV</li><br>
+												<li>Pomoc w znalezieniu pracy</li><br>
+											</ol>
+										</div>
+									</td>	 -->
+								</tr>
+								<% }) %>
+							</table>
+							</div>					
+							
+					<div class="buttons2">
+							<a href="../instructor/dodaj-wykladowce"><button class="butto" align="left" type="button">Dodaj</button></a>
+							<button class="butto" align="right" type="submit" formaction="../instructor/usun-wykladowce">Usuń</button>
+							<button class="butto" type="submit" formaction="../instructor/edytuj-wykladowce">Edytuj</button>
+							</div>
+					</form>	
+				</div>
+			</div>
+		</div>
+	
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+   <link rel="stylesheet" href="/css/style-dodaj-kurs.css" />
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+	
+	<script type="text/javascript" src="/js/dodaj_kurs.js" async></script>
+
+  </head>
+    <body>
+		<div class="a" align="center">
+			<div class="tytul">
+			<h1>Dodaj kurs</h1>
+			</div>
+		</div>
+			<div class="d" align="center">
+				<div class="f">					
+						<form action="/cours/<%= formAction %>" method="POST" onsubmit="return checkform()" align="center">
+							<span style="font-size:12px; color: red" name="texthelper0" class="texthelper0" ></span><br>
+							<div class="g" align="left">
+							<p>
+								<label id="nazwa" for="input-nazwa">Nazwa:</label>&emsp;&emsp;&emsp;&nbsp;
+								<input id="input-nazwa" name="kurs" type="text"<%= formAction ? '' : 'readonly' %> </input>
+								<span style="font-size:12px; color: red" class="text-helper1" ></span><br><br>
+							</p><br>
+							<div class="opis-field">
+							  <label for="input-opis">Opis:</label>&emsp;&emsp;&emsp;&emsp;&nbsp;
+							  <textarea id="input-opis" name="opis" rows="5" <%= formAction ? '' : 'readonly' %> >Opisz kurs</textarea>
+							  <span style="font-size:12px; color: red" class="text-helper2"></span>
+							</div><br>
+							<p>
+								<label id="cena" for="input-cena">Cena(zł):</label>&emsp;&emsp;&nbsp;&nbsp;
+								<input id="input-cena" name="cena" type="text" <%= formAction ? '' : 'readonly' %>></input>
+								<span style="font-size:12px; color: red" class="text-helper3"></span><br>
+								<label style="font-size: 10px">!!! przy kliknięciu przycisku "Dodaj kurs" input "Cena" podkreśli się na czerwono(nie wiem czemu),<br> ale proszę wcisnąć przycisk jeszcze raz, a kurs się doda </label><br><br>
+							</p>
+							<p>
+								<label id="wykladowca" for="input-wykladowca">Wykładowca:</label>&emsp;&emsp;&nbsp;&nbsp;
+								<select name="wykladowca" id="input-wykladowca" <%= formAction ? '' : 'readonly' %> >
+									<% instructorList.forEach(function(instructor){ %>
+									<option><%= instructor.Id_wykladowca %> : <%= instructor.imie %> <%= instructor.nazwisko %></option>
+									<% }) %>	
+								</select>
+								<span style="font-size:12px; color: red" class="text-helper3"></span><br><br>
+							</p>	
+							</div><br><br>
+								<button type="reset" value="Reset">Reset</button><br><br><br><br>	
+								<button id="accept-button" class="accept-button" type="submit">Dodaj kurs</button><br><br>	
+						</form>
+					
+				</div>
+			</div>
+
+  </body>
+</html>
